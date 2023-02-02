@@ -1,0 +1,40 @@
+<!--  how to use css in python_ flask-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  Load CSS in Flask with html-->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+
+ 
+<!--  Load JavaScript in Flask with html-->
+    
+ 
+  </head>
+  <body>
+    
+    <h1>Library Management System</h1>
+    <div class="login" align="center">
+      <h1>LOGIN</h1>
+      <div class="links">
+        <a href="{{ url_for('login') }}" class="active">LOGIN</a>
+        <a href="{{ url_for('register') }}">REGISTER</a>
+      </div><br><br>
+      <form action="" method="post">
+          <label for="username">
+              <i class="fa fa-user"></i>
+          </label>
+          <input type="text" name="username" placeholder="Username" id="username" required><br><br>
+          <label for="password">
+              <i class="fa fa-lock"></i>
+          </label>
+          <input type="password" name="password" placeholder="Password" id="password" required><br><br>
+          <div class="msg">{{ msg }}</div>
+          <input type="submit" value="Login">
+      </form>
+  </div>
+  
+
+
+  </body>
+
+</html>

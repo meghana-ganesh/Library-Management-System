@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  Load CSS in Flask with html-->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+
+ 
+<!--  Load JavaScript in Flask with html-->
+    
+ 
+  </head>
+  <body>
+    <h1>Library Management System</h1>
+    <div class="register">
+        <h1>REGISTER</h1>
+        <div class="links">
+            <a href="{{ url_for('login') }}">LOGIN</a>
+            <a href="{{ url_for('register') }}" class="active">REGISTER</a>
+        </div>
+        <form action="{{ url_for('register') }}" method="post" autocomplete="off">
+            <label for="username">
+                <i class="fa fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password">
+                <i class="fa fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <label for="email">
+                <i class="fa fa-envelope-open"></i>
+            </label>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <label for="librarian">
+                <i class="fa fa-lock"></i>
+            </label>
+            <input type="text" name="librarian" placeholder="Librarian Name" id="librarian" required>
+            <label for="mob">
+                <i class="fa fa-lock"></i>
+            </label>
+            <input type="tel" name="mob" placeholder="Mobile Number" id="mob" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    </body>
