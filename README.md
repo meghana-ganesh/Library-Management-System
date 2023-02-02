@@ -3,6 +3,7 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
+      <p>The project“Online Library Management System” is developed in ASP.NET, which mainly focuses on basic operations in a library like adding new member, new books, and updating new information, searching books and members and facility to issue and return books.</p>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
